@@ -23,21 +23,41 @@ $(function(){
             xml.find("contents chapter").each(function(){
                 var title = $(this).children("title").text();
                 var pagelocation = $(this).children("page").text();
+                
                 toc.append("<li><a>"+ title + "</a></li>");
-                //toc.children("li").children("a").children().attr("value",pagelocation );
+                
+                var counter =0;
+                toc.children("li").children("a").each(function(){
+                   console.log(this,counter ,toc.children("li").children("a").length );
+                    if(counter == (toc.children("li").children("a").length-1))
+                        {
+                            console.log(this);
+                            this.setAttribute("value", pagelocation);
+                        }
+                    counter ++;
+                });
+                
                 var counter = 0;
-                console.log(toc.children("li").children("a"));
                 $(this).find("sub").each(function(){
                     toc.append("<ul><li><a>" + $(this).children("title").text() +  "</a></li></ul>");
+                    
+                    toc.children("ul").children("li").children("a").each(function(){
+                         if(counter == (toc.children("ul").children("li").children("a").length-1))
+                             {
+                                 this.setAttribute("value", $(this).children("page").text());
+                             }
+                    
                 });
-            })
-            
+            });
+                
+            });
+                
             $("[value]").click(function(){
                 console.log("here");
                 var pageLocation = this.getAttribute("value");
                 $("#flipbook").turn('page', pageLocation);
                 
-            })
+            });
             //Load cover page
             var $book = $("div#flipbook");
             $book.append(xml.find("pages").html());
@@ -58,13 +78,11 @@ $(function(){
             
             // change flipbook direction to right-to-left
             $("#flipbook").turn("direction", "rtl");
-          
-        },
+                
 
-        error: function(){
+        error: (function(){
             console.log("Error loading book.");
-        }
-    });
+        });
 
     $(window).resize(function () {
         var width = $(window).width();
@@ -113,9 +131,6 @@ $(function(){
     
 });
 
-function pageNavigation(myTag){
-    console.log(myTag);
-}
 
 
 
