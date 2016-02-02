@@ -1,0 +1,110 @@
+/** 
+* -- Optional File --
+* Classes used by QuizLib, you can freely override them in your own stylesheets 
+*/
+
+.quizlib-question {
+    margin-bottom: 1em;
+}
+
+.quizlib-question-title {
+    font-weight: 600;
+}
+
+.quizlib-question-answers ul {
+    list-style: none;
+    line-height: 2em;
+    margin: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.quizlib-question-warning {
+    background: #f44336;
+    color: white;
+    
+    padding: 0px 10px;
+    margin: 0.5em;
+    
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.quizlib-correct {
+    background: #4caf50;
+    color: white;
+    padding: 5px 0px 5px 10px;
+}
+
+.quizlib-incorrect {
+    background: #f44336;
+    color: white;
+    padding: 5px 0px 5px 10px;
+}
+
+/*  -- EXTRA CSS --  */
+
+#quiz {
+  width: 50%;
+  min-width: 820px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 8px;
+  background-color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.15);
+}
+
+#quiz-result {
+  display: none;
+  margin-bottom: 10px;
+  
+  text-align: center;
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
+  font-size: 16px;
+  color: #fff;
+}
+
+input[type="text"]  {
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
+  font-size: 16px;
+  margin-right: 25px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 7px 15px;
+
+  cursor: pointer;
+
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
+
+  background-color: #2196f3;
+  border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius:2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #1e88e5;
+}
+
+button:active {
+  -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
+}

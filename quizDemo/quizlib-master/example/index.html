@@ -1,0 +1,68 @@
+<!-- Try this example at https://alpsquid.github.io/quizlib -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <script type="text/javascript" src="scripts/quizlib.1.0.0.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="styles/quizlib.css" media="screen">
+        
+        <link rel="stylesheet" type="text/css" href="styles/reset.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="styles/openSans.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" media="screen">
+        
+        <title>Quizlib Example</title>
+    </head>
+
+    <body>
+        
+        <!-- Quiz Container -->
+        <div id="quiz">
+            
+        <!-- Quiz Results -->
+        <div id="quiz-result" class="card">
+             You Scored: <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span id="quiz-max-score"></span><br/>
+        </div>
+        
+            <!-- Question 1 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>1. מה האות 'ט' מייצגת בראשי התבות טי"ל?</span></div>
+                <div class="quizlib-question-answers">
+                    <input type="text" name="q1">
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>2. מיהו רמ"ד טי"ל של מפקדת קריית ההדרכה?</span></div>
+                <div class="quizlib-question-answers">
+                    <ul>
+                        <li><label><input type="radio" name="q2" value="a">משה קסטרו</label></li>
+                        <li><label><input type="radio" name="q2" value="b">שרי חזי</label></li>
+                        <li><label><input type="radio" name="q2" value="c">שלומי אוגרן</label></li>
+                        <li><label><input type="radio" name="q2" value="d">אשר כהן</label></li>                        
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>3. מי מהבאים הוכשר ככותב לומדה?</span></div>
+                <div class="quizlib-question-answers">
+                    <ul>
+                        <li><label><input type="checkbox" name="q3" value="a"> לידר שפריר</label></li>
+                        <li><label><input type="checkbox" name="q3" value="b"> נוי אליאסי</label></li>
+                        <li><label><input type="checkbox" name="q3" value="c"> ניקול גוקובסקי</label></li>
+                        <li><label><input type="checkbox" name="q3" value="d"> אלעד מאור</label></li>
+                        <li><label><input type="checkbox" name="q3" value="e"> יובל ליליאן (a.k.a מלכת התוכן)</label></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Answer Button -->
+            <button type="button" onclick="showResults();">בדוק</button>
+        </div>
+    </body>
+</html>

@@ -17,15 +17,15 @@ $(function(){
             var toc = $("ul#table-of-content");
 
             //Add the cover title
-            toc.append("<li><a href='#'>" + xml.find("contents cover title").text() + "</a></li>");
+            toc.append("<li><a href=''>" + xml.find("contents cover title").text() + "</a></li>");
 
             //Populate ToC
             xml.find("contents chapter").each(function(){
                 var title = $(this).children("title").text();
-                toc.append("<li><a href='#'>" + title + "</a></li>");
+                toc.append("<li><a href=''>" + title + "</a></li>");
 
                 $(this).find("sub title").each(function(){
-                    toc.append("<ul><li><a href='#'>" + $(this).text() +  "</a></li></ul>");
+                    toc.append("<ul><li><a href=''>" + $(this).text() +  "</a></li></ul>");
                 })
             })
 
@@ -91,7 +91,9 @@ $(function(){
     $("#flipbook").bind("first", function(event) {
     $("div#right").addClass("disabled-btn");
     });
-
+    
+    $('a').removeAttr("href");
+    
     /*
     function flip_page(direction){
         // Ajax POST request to load the book

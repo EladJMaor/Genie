@@ -5,47 +5,61 @@
         <cover>
             <title>עקרונות לבניית מצגת הדרכתית</title>
         </cover>
-
+        
         <chapter id="1">
-            <title>הקדמה</title>
+            <title>דוגמאות לאינטראקציות</title>
 
             <sub id="2">
-                <title>מטרות</title>
+                <title>סרטון</title>
                 <page>1</page>
             </sub>
 
             <sub id="3">
+                <title>שאלון</title>
+                <page>1</page>
+            </sub>
+        </chapter>
+        
+        <chapter id="4">
+            <title>הקדמה</title>
+
+            <sub id="5">
+                <title>מטרות</title>
+                <page>1</page>
+            </sub>
+
+            <sub id="6">
                 <title>סיכום</title>
                 <page>1</page>
             </sub>
         </chapter>
 
-        <chapter id="4">
+        <chapter id="7">
             <title>זמן</title>
         </chapter>
         
-        <chapter id="5">
+        <chapter id="8">
             <title>תוכן - אפקטיביות</title>
         </chapter>
         
-        <chapter id="6">
+        <chapter id="9">
             <title>יעילות</title>
             
-            <sub id="7">
+            <sub id="10">
                 <title>חוק 7X7</title>
                 <page>1</page>
             </sub>
 
-            <sub id="8">
+            <sub id="11">
                 <title>עקרון הקיבוץ</title>
                 <page>1</page>
             </sub>
             
         </chapter>
         
-        <chapter id="5">
+        <chapter id="12">
             <title>סרגל שיעור</title>
-            <sub id="1">
+            <sub id="13">
                 <title>דגשים לסרגל</title>
                 <page>1</page>
             </sub>
@@ -64,6 +78,11 @@
                     <source src="images/pages/page4/video.mp4" type="video/mp4"></source>
                     Your Browser does not support the video.
                 </video>
+        </pre></div>
+        
+        <div dir="rtl"><pre><h1>אינטראקציות ומדיות לדוגמא</h1>
+                <h2>שאלון:</h2>
+                <iframe src="books/quiz/index.html" width="100%" height="500"></iframe>
         </pre></div>
         
         <div id="1" dir="rtl"><pre><h1>הקדמה</h1>
