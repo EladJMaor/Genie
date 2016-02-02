@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#marker-tool").click(function() {
         bIsMarkerActive = true;
         
-        $("")
+        $("#flipbook").addClass('marker-cursor');
     })
     
     $("#cursor-tool").click(function() {

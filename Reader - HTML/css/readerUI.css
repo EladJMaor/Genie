@@ -296,7 +296,7 @@ body {
 
 /* for markerTool.js */
 .marker-cursor {
-    cursor: url('../images/ToolBar/marker-cursor.ico'), default;
+    
 }
 
 .highlight-yellow {
