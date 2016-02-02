@@ -292,3 +292,28 @@ body {
     top: 860px;
     left: 480px;
 }
+
+/* for markerTool.js */
+.highlight-yellow {
+    background-color: yellow;
+}
+
+.highlight-blue {
+    background-color: deepskyblue;
+}
+
+.highlight-pink {
+    background-color: hotpink;
+}
+
+.highlight-green {
+    background-color: limegreen;
+}
+
+/*::selection {
+    background: yellow;
+}
+
+::-moz-selection {
+    background: yellow;
+}*/
