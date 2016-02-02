@@ -293,3 +293,32 @@ body {
         width: 80px;
     }
 }
+
+/* for markerTool.js */
+.marker-cursor {
+    cursor: url('../images/ToolBar/marker-cursor.ico'), default;
+}
+
+.highlight-yellow {
+    background-color: yellow;
+}
+
+.highlight-blue {
+    background-color: deepskyblue;
+}
+
+.highlight-pink {
+    background-color: hotpink;
+}
+
+.highlight-green {
+    background-color: limegreen;
+}
+
+/*::selection {
+    background: yellow;
+}
+
+::-moz-selection {
+    background: yellow;
+}*/

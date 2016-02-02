@@ -46,10 +46,10 @@
 /*  -- EXTRA CSS --  */
 
 #quiz {
-    position: relative;
-    top: 50px;
+  position: relative;
+  top: 50px;
   width: 100%;
-  min-width: 820px;
+  min-width: 350px;
   margin: 0 auto;
 }
 
@@ -65,9 +65,9 @@
 }
 
 #quiz-result {
-    position: fixed;
-    top: 0px;
-    width: 100%;
+  position: fixed;
+  top: 0px;
+  width: 100%;
     
   display: none;
   margin-bottom: 10px;
