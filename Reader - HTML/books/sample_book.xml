@@ -74,7 +74,7 @@
         
         <div dir="rtl"><pre><h1>אינטראקציות ומדיות לדוגמא</h1>
                 <h2>סרטון:</h2>
-                <video width="800" height="500" controls="controls">
+                <video width="600" height="350" controls="controls">
                     <source src="images/pages/page4/video.mp4" type="video/mp4"></source>
                     Your Browser does not support the video.
                 </video>
