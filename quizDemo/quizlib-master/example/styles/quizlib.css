@@ -1,0 +1,44 @@
+/** 
+* -- Optional File --
+* Classes used by QuizLib, you can freely override them in your own stylesheets 
+*/
+
+.quizlib-question {
+    margin-bottom: 1em;
+}
+
+.quizlib-question-title {
+    font-weight: 600;
+}
+
+.quizlib-question-answers ul {
+    list-style: none;
+    line-height: 2em;
+    margin: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.quizlib-question-warning {
+    background: #f44336;
+    color: white;
+    
+    padding: 0px 10px;
+    margin: 0.5em;
+    
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.quizlib-correct {
+    background: #4caf50;
+    color: white;
+    padding: 5px 0px 5px 10px;
+}
+
+.quizlib-incorrect {
+    background: #f44336;
+    color: white;
+    padding: 5px 0px 5px 10px;
+}

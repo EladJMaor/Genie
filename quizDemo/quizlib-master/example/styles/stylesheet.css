@@ -1,8 +1,4 @@
-html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-}
-
-body {
+#quiz {
   width: 50%;
   min-width: 820px;
   margin: 0 auto;
@@ -24,24 +20,27 @@ body {
   margin-bottom: 10px;
   
   text-align: center;
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
   font-size: 16px;
   color: #fff;
 }
 
 input[type="text"]  {
-  margin-left: 20px;
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
+  font-size: 16px;
+  margin-right: 25px;
 }
 
 button {
   margin-top: 10px;
-  padding: 4px;
+  padding: 7px 15px;
 
   cursor: pointer;
 
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
-  font-size: 16px;
-  color: #fff;
+  font-family: 'Open Sans Hebrew', Tahoma, Arial;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: white;
 
   background-color: #2196f3;
   border: none;
@@ -52,9 +51,11 @@ button {
   -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
+
 button:hover {
   background-color: #1e88e5;
 }
+
 button:active {
   -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.3);
