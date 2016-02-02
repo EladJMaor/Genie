@@ -8,60 +8,64 @@
         
         <chapter id="1">
             <title>דוגמאות לאינטראקציות</title>
-
+            <page>2</page>
             <sub id="2">
                 <title>סרטון</title>
-                <page>1</page>
+                <page>2</page>
             </sub>
 
             <sub id="3">
                 <title>שאלון</title>
-                <page>1</page>
+                <page>3</page>
             </sub>
         </chapter>
         
         <chapter id="4">
             <title>הקדמה</title>
-
+            <page>4</page>
             <sub id="5">
                 <title>מטרות</title>
-                <page>1</page>
+                <page>4</page>
             </sub>
 
             <sub id="6">
                 <title>סיכום</title>
-                <page>1</page>
+                <page>4</page>
             </sub>
         </chapter>
 
         <chapter id="7">
             <title>זמן</title>
+            <page>5</page>
         </chapter>
         
         <chapter id="8">
             <title>תוכן - אפקטיביות</title>
+            <page>6</page>
         </chapter>
         
         <chapter id="9">
             <title>יעילות</title>
+            <page>7</page>
             
             <sub id="10">
                 <title>חוק 7X7</title>
-                <page>1</page>
+                <page>7</page>
             </sub>
 
             <sub id="11">
                 <title>עקרון הקיבוץ</title>
-                <page>1</page>
+                <page>7</page>
             </sub>
             
         </chapter>
         
         <chapter id="12">
             <title>סרגל שיעור</title>
+            <page>8</page>
             <sub id="13">
                 <title>דגשים לסרגל</title>
-                <page>1</page>
+                <page>8</page>
             </sub>
         </chapter>
     </contents>
@@ -82,7 +86,7 @@
         
         <div dir="rtl"><pre><h1>אינטראקציות ומדיות לדוגמא</h1>
                 <h2>שאלון:</h2>
-                <object data="books/quiz/index.html" width="100%" height="500"> <embed src="books/quiz/index.html" width="100%" height="500"> </embed> Error: Embedded data could not be displayed. </object>
+                <iframe src="books/quiz/index.html" width="100%" height="500"></iframe>
         </pre></div>
         
         <div id="1" dir="rtl"><pre><h1>הקדמה</h1>

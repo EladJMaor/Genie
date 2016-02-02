@@ -17,18 +17,27 @@ $(function(){
             var toc = $("ul#table-of-content");
 
             //Add the cover title
-            toc.append("<li><a href='#'>" + xml.find("contents cover title").text() + "</a></li>");
+            toc.append("<li><a href=''>" + xml.find("contents cover title").text() + "</a></li>");
 
             //Populate ToC
             xml.find("contents chapter").each(function(){
                 var title = $(this).children("title").text();
-                toc.append("<li><a href='#'>" + title + "</a></li>");
-
-                $(this).find("sub title").each(function(){
-                    toc.append("<ul><li><a href='#'>" + $(this).text() +  "</a></li></ul>");
-                })
+                var pagelocation = $(this).children("page").text();
+                toc.append("<li><a>"+ title + "</a></li>");
+                //toc.children("li").children("a").children().attr("value",pagelocation );
+                var counter = 0;
+                console.log(toc.children("li").children("a"));
+                $(this).find("sub").each(function(){
+                    toc.append("<ul><li><a>" + $(this).children("title").text() +  "</a></li></ul>");
+                });
             })
-
+            
+            $("[value]").click(function(){
+                console.log("here");
+                var pageLocation = this.getAttribute("value");
+                $("#flipbook").turn('page', pageLocation);
+                
+            })
             //Load cover page
             var $book = $("div#flipbook");
             $book.append(xml.find("pages").html());
@@ -91,4 +100,12 @@ $(function(){
     $("#flipbook").bind("first", function(event) {
     $("div#right").addClass("disabled-btn");
     });
+    
 });
+
+function pageNavigation(myTag){
+    console.log(myTag);
+}
+
+
+
