@@ -1,0 +1,293 @@
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.top-bar-logos.float-right {
+    margin-right: 100px;
+}
+
+.top-bar-logos.float-left {
+    margin-left: 100px;
+}
+
+.fixed-panels {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: -80;
+}
+
+body {
+    background-color: #DDDDDD;
+}
+
+.btn:hover {
+    color: antiquewhite;
+}
+
+/* Top Information Bar */
+
+.top-bar {
+    background: #689FAF;
+    color: white;
+    
+    /* -moz-border-radius: 0px 0px 60px 60px;
+    -webkit-border-radius: 0px 0px 60px 60px;
+    border-radius: 0px 0px 60px 60px;
+    -khtml-border-radius: 0px 0px 60px 60px; */
+    
+    border-bottom: 5px solid #366A87;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;    
+}
+
+.top-bar ul {
+    list-style: none;
+}
+
+.top-bar li {
+    display: inline-block;
+    height: 100px;
+}
+
+.top-bar-logos {
+    display: inline-block;
+    
+    width: 100px;
+    margin: 0px 0px 0px 0px;
+    
+    background: whitesmoke;
+    
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    -khtml-border-radius: 100%;
+}
+
+.top-bar li img {
+    height: 70%;
+    
+    margin-top: 13px;
+}
+
+
+.book-info {
+    display: inline-block;
+    width: 40%;
+}
+
+.toc-toggle {
+    display: block;
+    position: absolute;
+    
+    font-size: 24px;
+    
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius: 0%;
+    -khtml-border-radius: 0%;
+    
+    float: right;
+    bottom: 0px;
+    height: 50px;
+    
+    /* -moz-border-bottom-right-radius: 60px;
+    -webkit-border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    -khtml-border-bottom-right-radius: 60px; */
+    
+    background: #448196;
+}
+
+/* Table Of Content Side Panel */
+
+.table-of-content-side-panel {
+    height: 100%;
+    background: #B2C9D3;
+    border-left: 5px solid #85A2BA;
+    float: right;
+    padding: 0;
+}
+
+#table-of-content {
+    display: inline-block;
+    list-style: inside;
+    width: 93%;
+    height: auto;
+    margin-right: 20px;
+    line-height: 2em;
+}
+
+#table-of-content {
+    font-weight: 700;
+}
+
+#table-of-content ul li{
+    margin-right: 25px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+#table-of-content a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+#table-of-content a:hover {
+    background: #C9DCE2;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: center;
+    
+    position: absolute;
+    top: 150px;
+    right: 380px;
+    
+    width: 1435px;
+    height: 885px;
+    
+    z-index: -11;
+}
+
+.book-container {
+    display: block;
+    position: relative;
+    
+    width: 1250px;
+    height: 885px;
+    
+    margin: 0px auto 0px auto;
+}
+
+.book {
+    display: block ;
+    position: relative;
+    
+    width: 1200px;
+    height: 780px;
+    
+    background: white;
+    border: 1px solid lightgray;
+    
+    margin: 0px auto 0px auto;
+}
+
+.navigation-btn {
+    display: block;
+    position: relative;
+    
+    width: 80px;
+    height: 80px;
+    
+    align-self: center;
+
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 61px;
+    
+    background: #519BB6;
+    
+    border: 3px solid #4D8392;
+    
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%; /* future proofing */
+    -khtml-border-radius: 100%; /* for old Konqueror browsers */
+}
+
+.disabled-btn {
+    cursor: default;
+    opacity: 0.0;
+}
+
+.navigation-btn.float-right {
+    float: right;
+    margin-right: auto;
+}
+
+.navigation-btn.float-left {
+    float: left;
+    margin-left: auto;
+}
+
+.tool-bar {
+    position: fixed;
+    float: left;
+    
+    background-color: #B2C9D3;
+    
+    width: 80px;
+    height: 318px;
+    
+    top: 150px;
+    left: 30px;
+    
+    border: 1px solid #91B5CE;
+    
+    -moz-border-bottom-left-radius: 80px;
+    -webkit-border-bottom-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    -moz-border-bottom-right-radius: 80px;
+    -webkit-border-bottom-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    
+    -moz-border-top-left-radius: 80px;
+    -webkit-border-top-left-radius: 80px;
+    border-top-left-radius: 80px;
+    -moz-border-top-right-radius: 80px;
+    -webkit-border-top-right-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.tool-item {
+    display: block;
+    position: relative;
+    
+    margin: 6px;
+    margin-bottom: 15px;
+    
+    background: #A5BCC4;
+    
+    width: 65px;
+    height: 65px;
+    
+    border-radius: 100%;
+    border-radius: 100%;
+    
+    border: 1px solid #83A6BA;
+}
+
+.tool-item:hover {    
+    background: #B8C8CC;
+    
+    border: 1px solid whitesmoke;
+}
+
+.tool-item img {
+    display: block;
+    position: relative;
+    top:7px;
+    left:0px;
+    width: 38px;
+    height: 38px;
+}
+
+.progress {
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+    margin: 0 auto 0 auto;
+    top: 860px;
+    left: 480px;
+}
