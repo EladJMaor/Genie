@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="he">
+
+<head>
+    <meta charset="utf-8" />
+    <title>צד קורא</title>
+    <meta name="description" content="מחולל ספרים- יצירת ספרים דיגיטליים בדרך שלך" />
+    <meta name="keywords" content="מחולל, ספרים, ספר דיגיטלי, מחולל ספרים" />
+    <meta name="author" content="Till - מדור טי''ל" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- BootStrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script href="js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/openSans.css" rel="stylesheet" type="text/css" />
+    <link href="css/readerUI.css" rel="stylesheet" type="text/css" />
+    <link href="css/sample-book.css" rel="stylesheet" type="text/css" />
+    <!-- Scripts -->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <!-- TurnJS -->
+    <script type="text/javascript" src="js/turnjs4/lib/turn.js"></script>
+    <script src="js/book.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <div class="my-container">
+
+
+                <!-- Main Header And TOC Panels -->
+                <div class="fixed-panels">
+
+                    <!-- Top-Bar: includes main info about the current Book -->
+                    <header class="top-bar" role="navigation">
+                
+                            <div class="btn glyphicon glyphicon-menu-hamburger toc-toggle"></div>
+                
+                            <ul>
+                                <li class="top-bar-logos float-right">
+                                     <img src="images/NewLogo.png" alt="לוגו מחולל ספרים דיגיטליים">
+                                </li>
+                
+                                 <li class="book-info">
+                                     <h1 id="book-title"></h1>
+                                     <p id="book-reference"></p>
+                                </li>
+                
+                                <li class="top-bar-logos float-left">
+                                     <img src="images/LogoTill.png" alt="לוגו מדור טי''ל קריית ההדרכה">
+                                </li>
+                            </ul>
+                   </header>
+
+                   <!-- TableOfContent Side Panel: The Table Of Content, Displayed on the screen by default -->
+                   <nav id="toc" class="col-lg-2 table-of-content-side-panel">
+                            <ul id="table-of-content">
+                            </ul>
+                   </nav>
+
+                </div>
+        
+        <section class="tool-bar">
+            <div id="cursor-tool" class="btn tool-item">
+                <img src="images/ToolBar/CursorTool.png">
+            </div>
+            
+            <div id="marker-tool" class="btn tool-item">
+                <img src="images/ToolBar/MarkerTool.png">
+            </div>
+            
+            <div id="aa-tool" class="btn tool-item">
+                <img src="images/ToolBar/AaTool.png">
+            </div>
+            
+            <div id="search-tool" class="btn tool-item">
+                <img src="images/ToolBar/SearchTool.png">
+            </div>
+        </section>
+        
+       <section class="inner-container">
+           <div id="right" class="glyphicon glyphicon-chevron-right btn navigation-btn float-right"></div>
+           
+           <div class="book-container">
+               
+               <div id="flipbook" class="book">
+                   
+               </div>               
+               
+           </div>
+           
+           <div class="progress">
+           <div class="progress-bar progress-bar-info float-right" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:20%">בר התקדמות</div>
+           </div>
+           
+           <div id="left" class="glyphicon glyphicon-chevron-left btn navigation-btn float-left"></div>
+       </section>
+        
+           
+        </div>
+
+</body>
+
+</html>
