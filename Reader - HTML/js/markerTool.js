@@ -4,6 +4,8 @@ $(document).ready(function() {
     
     $("#marker-tool").click(function() {
         bIsMarkerActive = true;
+        
+        $("")
     })
     
     $("#cursor-tool").click(function() {
@@ -11,6 +13,7 @@ $(document).ready(function() {
     })
     
     $("#flipbook").mouseup(function() {
+        // markers only if the marker is active and inside the book
         if (elementContainsSelection(document.getElementById('flipbook')) && bIsMarkerActive) {
             highlightSelection('yellow');
         }
