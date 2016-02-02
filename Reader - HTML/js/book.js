@@ -92,8 +92,6 @@ $(function(){
     $("div#right").addClass("disabled-btn");
     });
     
-    $('a').removeAttr("href");
-    
     /*
     function flip_page(direction){
         // Ajax POST request to load the book
