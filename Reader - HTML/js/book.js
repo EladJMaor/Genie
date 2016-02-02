@@ -17,48 +17,19 @@ $(function(){
             var toc = $("ul#table-of-content");
 
             //Add the cover title
-            toc.append("<li><a href=''>" + xml.find("contents cover title").text() + "</a></li>");
+            toc.append("<li><a href='#'>" + xml.find("contents cover title").text() + "</a></li>");
 
             //Populate ToC
             xml.find("contents chapter").each(function(){
                 var title = $(this).children("title").text();
-                var pagelocation = $(this).children("page").text();
-                
-                toc.append("<li><a>"+ title + "</a></li>");
-                
-                var counter =0;
-                toc.children("li").children("a").each(function(){
-                   console.log(this,counter ,toc.children("li").children("a").length );
-                    if(counter == (toc.children("li").children("a").length-1))
-                        {
-                            console.log(this);
-                            this.setAttribute("value", pagelocation);
-                        }
-                    counter ++;
-                });
-                
-                var counter = 0;
-                $(this).find("sub").each(function(){
-                    toc.append("<ul><li><a>" + $(this).children("title").text() +  "</a></li></ul>");
-                    
-                    toc.children("ul").children("li").children("a").each(function(){
-                         if(counter == (toc.children("ul").children("li").children("a").length-1))
-                             {
-                                 this.setAttribute("value", $(this).children("page").text());
-                             }
-                    
-                });
-            });
-                
-            });
-                
-            $("[value]").click(function(){
-                console.log("here");
-                var pageLocation = this.getAttribute("value");
-                $("#flipbook").turn('page', pageLocation);
-                
-            });
-            //Load cover page
+                toc.append("<li><a href='#'>" + title + "</a></li>");
+
+                $(this).find("sub title").each(function(){
+                    toc.append("<ul><li><a href='#'>" + $(this).text() +  "</a></li></ul>");
+                })
+            })
+
+            ///Load cover page
             var $book = $("div#flipbook");
             $book.append(xml.find("pages").html());
 
@@ -78,12 +49,13 @@ $(function(){
             
             // change flipbook direction to right-to-left
             $("#flipbook").turn("direction", "rtl");
-                
+          
+        },
 
-        error: (function(){
+        error: function(){
             console.log("Error loading book.");
-        });
-
+        }
+    });
     $(window).resize(function () {
         var width = $(window).width();
         var height = $(window).height();
@@ -128,9 +100,4 @@ $(function(){
     $("#flipbook").bind("first", function(event) {
     $("div#right").addClass("disabled-btn");
     });
-    
 });
-
-
-
-
