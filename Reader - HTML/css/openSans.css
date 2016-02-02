@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: italic;
+    font-weight: 300;
+    src: url(../fonts/OpenSans/opensanshebrew-lightitalic-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-lightitalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-lightitalic-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-lightitalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/OpenSans/opensanshebrew-light-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-light-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-light-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-light-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: italic;
+    font-weight: 400;
+    src: url(../fonts/OpenSans/opensanshebrew-italic-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-italic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-italic-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-italic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/OpenSans/opensanshebrew-regular-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-regular-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-regular-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-regular-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: italic;
+    font-weight: 700;
+    src: url(../fonts/OpenSans/opensanshebrew-bolditalic-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-bolditalic-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-bolditalic-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-bolditalic-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/OpenSans/opensanshebrew-bold-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-bold-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-bold-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-bold-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: italic;
+    font-weight: 800;
+    src: url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 800;
+    src: url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.eot);
+    src: url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.woff) format('woff'),
+    url(../fonts/OpenSans/opensanshebrew-extrabold-webfont.ttf) format('truetype');
+}
+
+/* הגדרת פונט ברירת המחדל לאופן-סנס */
+
+body {
+    direction: rtl;
+    font-family: 'Open Sans Hebrew', Tahoma, Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+strong {
+    font-family: 'Open Sans Hebrew', Tahoma, Arial;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+em {
+    font-family: 'Open Sans Hebrew', Tahoma, Arial;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* ביטול מסגרת קישור כחול לדפדפן אקספלורר */
+
+a image {
+    border:none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 38px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
