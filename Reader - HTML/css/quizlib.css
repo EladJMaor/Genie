@@ -46,7 +46,9 @@
 /*  -- EXTRA CSS --  */
 
 #quiz {
-  width: 50%;
+    position: relative;
+    top: 50px;
+  width: 100%;
   min-width: 820px;
   margin: 0 auto;
 }
@@ -63,6 +65,10 @@
 }
 
 #quiz-result {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    
   display: none;
   margin-bottom: 10px;
   
@@ -76,9 +82,15 @@ input[type="text"]  {
   font-family: 'Open Sans Hebrew', Tahoma, Arial;
   font-size: 16px;
   margin-right: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    
   margin-top: 10px;
   padding: 7px 15px;
 

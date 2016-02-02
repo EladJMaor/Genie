@@ -43,7 +43,7 @@ function handleAnswers(question, no, correct) {
                 correctAnswer.classList.add(quiz.Classes.CORRECT);
                 correctAnswer.classList.add(quiz.Classes.TEMP); // quiz.checkAnswers will automatically remove elements with the temp class
                 correctAnswer.innerHTML = quiz.answers[no];
-                correctAnswer.style.marginLeft = '10px';
+                correctAnswer.style.marginRight = '10px';
                 answers[i].parentNode.insertBefore(correctAnswer, answers[i].nextSibling);
             }
         }

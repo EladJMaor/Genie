@@ -1,0 +1,126 @@
+<!-- Try this example at https://alpsquid.github.io/quizlib -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <script type="text/javascript" src="../../js/quizlib.1.0.0.js"></script>
+        <!-- <script type="text/javascript" src="../../js/main.js"></script> -->
+        
+        <link rel="stylesheet" type="text/css" href="../../css/quizlib.css" media="screen">
+        
+        <link rel="stylesheet" type="text/css" href="../../css/reset.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../css/openSans.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css" media="screen">
+        
+        <title>Quizlib Example</title>
+    </head>
+    
+    <script>
+            var quiz;
+
+            function showResults() {
+                // Check answers and continue if all questions have been answered
+                if (quiz.checkAnswers()) {
+                    var quizScorePercent = quiz.result.scorePercentFormatted; // The unformatted percentage is a decimal in range 0 - 1
+                    var quizResultElement = document.getElementById('quiz-result');
+                    quizResultElement.style.display = 'block';
+                    document.getElementById('quiz-score').innerHTML = quiz.result.score.toString();
+                    document.getElementById('quiz-max-score').innerHTML = quiz.result.totalQuestions.toString();
+                    document.getElementById('quiz-percent').innerHTML = quizScorePercent.toString();
+
+                    // Change background colour of results div according to score percent
+                    if (quizScorePercent >= 75) quizResultElement.style.backgroundColor = '#4caf50';
+                    else if (quizScorePercent >= 50) quizResultElement.style.backgroundColor = '#ffc107';
+                    else if (quizScorePercent >= 25) quizResultElement.style.backgroundColor = '#ff9800';
+                    else if (quizScorePercent >= 0) quizResultElement.style.backgroundColor = '#f44336';
+
+                    // Highlight questions according to whether they were correctly answered. The callback allows us to highlight/show the correct answer
+                    quiz.highlightResults(handleAnswers);
+                }
+            }
+
+            /** Callback for Quiz.highlightResults. Highlights the correct answers of incorrectly answered questions 
+             * Parameters are: the question element, question number, correctly answered flag
+             */
+            function handleAnswers(question, no, correct) {
+                if (!correct) {
+                    var answers = question.getElementsByTagName('input');
+                    for (var i = 0; i < answers.length; i++) {
+                        if (answers[i].type === "checkbox" || answers[i].type === "radio"){ 
+                            // If the current input element is part of the correct answer, highlight it
+                            if (quiz.answers[no].indexOf(answers[i].value) > -1) {
+                                answers[i].parentNode.classList.add(quiz.Classes.CORRECT);
+                            }
+                        } else {
+                            // If the input is anything other than a checkbox or radio button, show the correct answer next to the element
+                            var correctAnswer = document.createElement('span');
+                            correctAnswer.classList.add(quiz.Classes.CORRECT);
+                            correctAnswer.classList.add(quiz.Classes.TEMP); // quiz.checkAnswers will automatically remove elements with the temp class
+                            correctAnswer.innerHTML = quiz.answers[no];
+                            correctAnswer.style.marginRight = '10px';
+                            answers[i].parentNode.insertBefore(correctAnswer, answers[i].nextSibling);
+                        }
+                    }
+                }
+            }
+
+            window.onload = function() {
+                quiz = new Quiz('quiz', [
+                    'טכנולוגיה',
+                    'a',
+                    ['b','c','d']
+                ]);
+            };
+    </script>
+    
+    <body>
+        
+        <!-- Quiz Container -->
+        <div id="quiz">
+            
+        <!-- Quiz Results -->
+        <div id="quiz-result" class="card">
+             You Scored: <span id="quiz-percent"></span>% - <span id="quiz-score"></span>/<span id="quiz-max-score"></span><br/>
+        </div>
+        
+            <!-- Question 1 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>1. מה האות 'ט' מייצגת בראשי התבות טי"ל?</span></div>
+                <div class="quizlib-question-answers">
+                    <input type="text" name="q1">
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>2. מיהו רמ"ד טי"ל של מפקדת קריית ההדרכה?</span></div>
+                <div class="quizlib-question-answers">
+                    <ul>
+                        <li><label><input type="radio" name="q2" value="a">משה קסטרו</label></li>
+                        <li><label><input type="radio" name="q2" value="b">שרי חזי</label></li>
+                        <li><label><input type="radio" name="q2" value="c">שלומי אוגרן</label></li>
+                        <li><label><input type="radio" name="q2" value="d">אשר כהן</label></li>                        
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="card quizlib-question">
+                <div class="quizlib-question-title"><span>3. מי מהבאים הוכשר ככותב לומדה?</span></div>
+                <div class="quizlib-question-answers">
+                    <ul>
+                        <li><label><input type="checkbox" name="q3" value="a"> לידר שפריר</label></li>
+                        <li><label><input type="checkbox" name="q3" value="b"> נוי אליאסי</label></li>
+                        <li><label><input type="checkbox" name="q3" value="c"> ניקול גוקובסקי</label></li>
+                        <li><label><input type="checkbox" name="q3" value="d"> אלעד מאור</label></li>
+                        <li><label><input type="checkbox" name="q3" value="e"> יובל ליליאן (a.k.a מלכת התוכן)</label></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Answer Button -->
+            <button type="button" onclick="showResults();">בדוק</button>
+        </div>
+    </body>
+</html>
