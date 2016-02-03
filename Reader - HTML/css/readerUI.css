@@ -368,7 +368,7 @@ body {
 
 /* for markerTool.js */
 .marker-cursor {
-	cursor: url('/images/ToolBar/marker-cur.png'), default;
+	cursor: url('../images/ToolBar/marker-cur.png'), default;
 }
 
 /*::selection {
