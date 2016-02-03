@@ -1,21 +1,40 @@
-$(document).ready(function() {
+$(document).ready(function() {    
+    $(".marker-panel").hide();
+    
     var bIsMarkerActive = false;
-    var selectedColor = "remove";
+    var selectedColor = "unmarker";
+    
+    $(".book, .inner-container, .top-bar, .table-of-content-side-panel").click(function() {
+        $(".marker-panel").hide("slide", { direction: "left" }, 750);
+    })
     
     $("#marker-tool").click(function() {
+        $(".marker-panel").toggle("slide", { direction: "left" }, 750);
+    })    
+    
+    
+    $("#marker-yellow, #marker-blue, #marker-pink, #marker-green, #marker-unmarker").click(function(){
         bIsMarkerActive = true;
+        selectedColor = this.getAttribute("value");
         
-        $("#flipbook").addClass('marker-cursor');
+        $("body").addClass('marker-cursor');
+        
+        $(".marker-panel").hide("slide", { direction: "left" }, 750);
     })
+
     
     $("#cursor-tool").click(function() {
         bIsMarkerActive = false;
+        selectedColor = "unmarker";
+        
+        $("body").removeClass('marker-cursor');
+        
     })
     
     $("#flipbook").mouseup(function() {
         // markers only if the marker is active and inside the book
         if (elementContainsSelection(document.getElementById('flipbook')) && bIsMarkerActive) {
-            highlightSelection('yellow');
+            highlightSelection(selectedColor);
         }
     })
 });
