@@ -17,16 +17,28 @@ $(function(){
             var toc = $("ul#table-of-content");
 
             //Add the cover title
-            toc.append("<li><a href='#'>" + xml.find("contents cover title").text() + "</a></li>");
+            toc.append("<li><a>" + xml.find("contents cover title").text() + "</a></li>");
+            toc.children("li").children("a").attr("value" , xml.find("contents cover page").text());
 
             //Populate ToC
             xml.find("contents chapter").each(function(){
+                //adds the title
                 var title = $(this).children("title").text();
-                toc.append("<li><a href='#'>" + title + "</a></li>");
-
-                $(this).find("sub title").each(function(){
-                    toc.append("<ul><li><a href='#'>" + $(this).text() +  "</a></li></ul>");
+                toc.append("<li><a>" + title + "</a></li>");
+                
+                var pagelocation = $(this).children("page").text();//saves the page location
+                toc.children("li").children("a")[toc.children("li").children("a").length - 1].setAttribute("value",pagelocation )
+                
+                $(this).find("sub").each(function(){
+                    toc.append("<ul><li><a>" + $(this).children("title").text() +  "</a></li></ul>");
+                    pagelocation = $(this).children("page").text();
+                    toc.children("ul").children("li").children("a")[toc.children("ul").children("li").children("a").length - 1].setAttribute("value",pagelocation ); 
                 })
+            })
+            
+            $("[value]").click(function(){
+                pageLocation = this.getAttribute("value");
+                $("#flipbook").turn("page" , pageLocation);
             })
 
             ///Load cover page
@@ -80,8 +92,9 @@ $(function(){
     $("#flipbook").bind("turning", function(event,page,view) {
         
         $("video").each(function(){
-        this.pause();
         });
+        
+        
         
         if (page > 1) {
             $("div#right").removeClass("disabled-btn");
@@ -100,4 +113,12 @@ $(function(){
     $("#flipbook").bind("first", function(event) {
     $("div#right").addClass("disabled-btn");
     });
+    
+    $("#flipbook").bind("start",function(event, pageObject, corner){
+       console.log(pageObject.turn); 
+    });
 });
+
+
+
+
