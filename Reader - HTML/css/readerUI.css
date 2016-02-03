@@ -33,17 +33,17 @@ body {
 /* Top Information Bar */
 
 .top-bar {
-    background: #689FAF;
+    background: #5089A5;
     color: white;
     /* -moz-border-radius: 0px 0px 60px 60px;
     -webkit-border-radius: 0px 0px 60px 60px;
     border-radius: 0px 0px 60px 60px;
     -khtml-border-radius: 0px 0px 60px 60px; */
-    border-bottom: 5px solid #366A87;
+    
     position: fixed;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 13px;
+    padding-bottom: 12px;
     text-align: center;
 }
 
@@ -93,7 +93,7 @@ body {
     -webkit-border-bottom-right-radius: 60px;
     border-bottom-right-radius: 60px;
     -khtml-border-bottom-right-radius: 60px; */
-    background: #448196;
+    background: #84B0C1;
     top: initial;
 }
 
@@ -101,8 +101,8 @@ body {
 
 .table-of-content-side-panel {
     height: 100%;
-    background: #B2C9D3;
-    border-left: 5px solid #85A2BA;
+    background: #A4B9C3;
+    border-left: 5px solid #84B0C1;
     float: right;
     padding: 0;
     position: fixed;
@@ -206,12 +206,15 @@ body {
 .tool-bar {
     position: fixed;
     float: left;
-    background-color: #B2C9D3;
-    width: 80px;
-    height: 318px;
+    background-color: #84B0C1;
+    width: 75px;
+    height: 281px;
     top: 150px;
     left: 30px;
-    border: 1px solid #91B5CE;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
     -moz-border-bottom-left-radius: 80px;
     -webkit-border-bottom-left-radius: 80px;
     border-bottom-left-radius: 80px;
@@ -229,30 +232,29 @@ body {
 .tool-item {
     display: inline-block;
     position: relative;
-    margin: 6px;
-    margin-bottom: 9px;
-    background: #A5BCC4;
-    width: 65px;
-    height: 65px;
+    margin: 7px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    background: #5089A5;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     border-radius: 100%;
-    border: 1px solid #83A6BA;
     
     z-index: 5;
 }
 
 .tool-item:hover {
-    background: #B8C8CC;
-    border: 1px solid whitesmoke;
+    background: #6199AF;
 }
 
 .tool-item img {
     display: block;
     position: relative;
     top: 7px;
-    left: 0px;
-    width: 38px;
-    height: 38px;
+    left: -1px;
+    width: 32px;
+    height: 32px;
 }
 
 .progress {
@@ -300,14 +302,17 @@ body {
 .marker-panel {
     display: inline-block;
     position: relative;
-    top: -231px;
+    top: -199px;
     float: left;
     left: 35px;
     
-    background: lightgray;
+    background: #84B0C1;
+    border-bottom: 3px solid #5089A5;
+    opacity: 0.75;
     
-    height: 60px;
-    width: 315px;
+    
+    height: 58px;
+    width: 308px;
     
     
     -moz-border-bottom-right-radius: 80px;
@@ -326,11 +331,11 @@ body {
     position: relative;
     float: left;
     
-    left: 40px;
+    left: 35px;
     
     height: 48px;
     width: 48px;
-    margin: 6px 3px;
+    margin: 5px 3px;
     
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -338,23 +343,23 @@ body {
 }
 
 .marker-color.yellow {
-    background-color: yellow;
-    border-color: black;
+    background-color: #FFEA55;
+    border-color: #D8C032;
 }
 
 .marker-color.blue {
-    background-color: deepskyblue;
-    border-color: black;
+    background-color: #40FFFA;
+    border-color: #20CEC5;
 }
 
 .marker-color.pink {
-    background-color: hotpink;
-    border-color: black;
+    background-color: #FF64F8;
+    border-color: #D848D8;
 }
 
 .marker-color.green {
-    background-color: limegreen;
-    border-color: black;
+    background-color: #9DFF36;
+    border-color: #86DB23;
 }
 
 .marker-color.unmarker {
@@ -364,22 +369,6 @@ body {
 /* for markerTool.js */
 .marker-cursor {
 	cursor: url('/images/ToolBar/marker-cur.png'), default;
-}
-
-.highlight-yellow {
-    background-color: yellow;
-}
-
-.highlight-blue {
-    background-color: deepskyblue;
-}
-
-.highlight-pink {
-    background-color: hotpink;
-}
-
-.highlight-green {
-    background-color: limegreen;
 }
 
 /*::selection {

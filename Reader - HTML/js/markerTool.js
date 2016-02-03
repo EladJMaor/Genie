@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(".marker-panel").hide();
     
     var bIsMarkerActive = false;
-    var selectedColor = "unmarker";
+    var selectedColor = "transparent";
     
     $(".book, .inner-container, .top-bar, .table-of-content-side-panel").click(function() {
         $(".marker-panel").hide("slide", { direction: "left" }, 750);
@@ -25,7 +25,7 @@ $(document).ready(function() {
     
     $("#cursor-tool").click(function() {
         bIsMarkerActive = false;
-        selectedColor = "unmarker";
+        selectedColor = "transparent";
         
         $("body").removeClass('marker-cursor');
         
