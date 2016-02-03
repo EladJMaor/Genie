@@ -22,10 +22,13 @@ function toggleToc() {
     }
 }
 
+// set sidebar height if it has overflow.
 $(document).ready(function () {
     setTimeout(function () {
-        var height = $('.inner-container').height() + 50;
-        $('#toc').height(height);
+        if ($('.inner-container').height() + $('.top-bar').height() > $(window).height()) {
+            var height = $('.inner-container').height() + 50;
+            $('#toc').height(height);
+        }
     }, 1000);
 
 })

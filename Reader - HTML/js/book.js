@@ -38,8 +38,8 @@ $(function(){
 
             //Load turn.js book
             $("#flipbook").turn({
-                width: width * 0.60,
-                height: width * 0.60 * 0.71,
+                width: width * 0.55,
+                height: width * 0.55 * 0.71,
                 duration: 1500,
                 autoCenter: true
             });
@@ -56,11 +56,13 @@ $(function(){
             console.log("Error loading book.");
         }
     });
+
+    // resize book while window resize.
     $(window).resize(function () {
         var width = $(window).width();
         var height = $(window).height();
 
-        $("#flipbook").turn("size", width * 0.60, width * 0.60 * 0.71);
+        $("#flipbook").turn("size", width * 0.55, width * 0.55 * 0.71);
     });
     
     // disable the previous button
