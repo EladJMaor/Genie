@@ -19,6 +19,13 @@ $(document).ready(function() {
         
         $("body").addClass('marker-cursor');
         
+        if (selectedColor != 'transparent') {
+            $("#marker-tool").css('box-shadow', 'inset 0px 0px 10px '+selectedColor);
+        }
+        else {
+            $("#marker-tool").css('box-shadow', 'inset 0px 0px 10px white');
+        }
+        
         $(".marker-panel").hide("slide", { direction: "left" }, 750);
     })
 
@@ -28,7 +35,7 @@ $(document).ready(function() {
         selectedColor = "transparent";
         
         $("body").removeClass('marker-cursor');
-        
+        $("#marker-tool").css('box-shadow', 'inset 0px 0px 10px transparent');
     })
     
     $("#flipbook").mouseup(function() {
