@@ -227,16 +227,18 @@ body {
 }
 
 .tool-item {
-    display: block;
+    display: inline-block;
     position: relative;
     margin: 6px;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
     background: #A5BCC4;
     width: 65px;
     height: 65px;
     border-radius: 100%;
     border-radius: 100%;
     border: 1px solid #83A6BA;
+    
+    z-index: 5;
 }
 
 .tool-item:hover {
@@ -294,9 +296,74 @@ body {
     }
 }
 
+/* MarkerToolPanel */
+.marker-panel {
+    display: inline-block;
+    position: relative;
+    top: -231px;
+    float: left;
+    left: 35px;
+    
+    background: lightgray;
+    
+    height: 60px;
+    width: 315px;
+    
+    
+    -moz-border-bottom-right-radius: 80px;
+    -webkit-border-bottom-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    -moz-border-top-right-radius: 80px;
+    -webkit-border-top-right-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.marker-color {
+    background: white;
+    border: 1px solid gray;
+    
+    display: inline-block;
+    position: relative;
+    float: left;
+    
+    left: 40px;
+    
+    height: 48px;
+    width: 48px;
+    margin: 6px 3px;
+    
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.marker-color.yellow {
+    background-color: yellow;
+    border-color: black;
+}
+
+.marker-color.blue {
+    background-color: deepskyblue;
+    border-color: black;
+}
+
+.marker-color.pink {
+    background-color: hotpink;
+    border-color: black;
+}
+
+.marker-color.green {
+    background-color: limegreen;
+    border-color: black;
+}
+
+.marker-color.unmarker {
+    
+}
+
 /* for markerTool.js */
 .marker-cursor {
-    
+	cursor: url('/images/ToolBar/marker-cur.png'), default;
 }
 
 .highlight-yellow {
